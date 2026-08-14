@@ -1,13 +1,266 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>aurelia</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurelia — Fine Dining</title>
+  <meta name="description" content="Aurelia is a modern fine dining restaurant offering an unforgettable culinary experience. Reserve a table or order online." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <span class="logo-mark">A</span>
+        <span class="logo-text">AURELIA</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#story">Our Story</a>
+        <a href="#menu">Menu</a>
+        <a href="#experience">Experience</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-ghost" id="orderBtn">Order Online</button>
+        <button class="btn-primary" id="reserveBtn">Reserve Table</button>
+        <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80" alt="Fine dining table setting" class="hero-image" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Contemporary Fine Dining</p>
+      <h1 class="hero-title">Where Taste<br>Meets Elegance</h1>
+      <p class="hero-subtitle">An intimate culinary journey crafted with seasonal ingredients, refined technique, and genuine hospitality.</p>
+      <div class="hero-ctas">
+        <a href="#menu" class="btn-primary">View Menu</a>
+        <button class="btn-outline" id="heroReserve">Reserve a Table</button>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== QUICK ACTIONS ===== -->
+  <section class="quick-actions">
+    <div class="quick-inner">
+      <a href="#menu" class="quick-item">
+        <span class="quick-icon">☰</span>
+        <span>View Menu</span>
+      </a>
+      <button class="quick-item" id="quickReserve">
+        <span class="quick-icon">◷</span>
+        <span>Reserve Table</span>
+      </button>
+      <button class="quick-item" id="quickOrder">
+        <span class="quick-icon">🛒</span>
+        <span>Order Online</span>
+      </button>
+      <a href="#contact" class="quick-item">
+        <span class="quick-icon">📍</span>
+        <span>Get Directions</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== SIGNATURE DISHES ===== -->
+  <section class="section signature" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">A Few Reasons to Come Hungry</p>
+        <h2 class="section-title">Signature Dishes</h2>
+      </div>
+
+      <div class="dishes-grid" id="dishesGrid">
+        <!-- Dishes will be injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STORY ===== -->
+  <section class="section story" id="story">
+    <div class="container story-grid">
+      <div class="story-image">
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80" alt="Chef plating" />
+      </div>
+      <div class="story-content">
+        <p class="eyebrow">More Than a Meal</p>
+        <h2 class="section-title">Our Story</h2>
+        <p class="story-text">
+          Aurelia was born from a simple belief: dining should feel like a celebration of the senses. 
+          Every dish is composed with precision, every ingredient chosen for its integrity, and every guest is welcomed as if they were family.
+        </p>
+        <p class="story-text">
+          Our kitchen works with local farms and coastal suppliers to bring the brightest flavors of the season to your table.
+        </p>
+        <a href="#experience" class="btn-text">Discover the Experience →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PHILOSOPHY ===== -->
+  <section class="section philosophy">
+    <div class="container">
+      <p class="eyebrow center">Made With Intention</p>
+      <h2 class="section-title center">Our Philosophy</h2>
+      <div class="philosophy-grid">
+        <div class="phil-card">
+          <div class="phil-number">01</div>
+          <h3>Fresh Ingredients</h3>
+          <p>Thoughtfully selected produce, seafood, and proteins at their peak.</p>
+        </div>
+        <div class="phil-card">
+          <div class="phil-number">02</div>
+          <h3>Crafted Daily</h3>
+          <p>Everything prepared with attention to quality and consistency.</p>
+        </div>
+        <div class="phil-card">
+          <div class="phil-number">03</div>
+          <h3>Warm Hospitality</h3>
+          <p>Every guest should feel genuinely welcome and cared for.</p>
+        </div>
+        <div class="phil-card">
+          <div class="phil-number">04</div>
+          <h3>Memorable Flavors</h3>
+          <p>A menu designed around dishes people want to return for.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ATMOSPHERE ===== -->
+  <section class="section atmosphere" id="experience">
+    <div class="container">
+      <p class="eyebrow center">Come for the Food. Stay for the Atmosphere.</p>
+      <h2 class="section-title center">The Experience</h2>
+      <div class="atmosphere-grid">
+        <div class="atm-item large">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=80" alt="Restaurant interior" />
+        </div>
+        <div class="atm-item">
+          <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=600&q=80" alt="Table setting" />
+        </div>
+        <div class="atm-item">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="Plated dish" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESERVE CTA ===== -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Reserve Your Table</h2>
+      <p>Join us for an evening of refined flavors and warm hospitality.</p>
+      <button class="btn-primary large" id="ctaReserve">Book a Table</button>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-mark">A</span>
+          <span class="logo-text">AURELIA</span>
+        </div>
+        <p>Contemporary fine dining in an intimate setting.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <p>128 Harbor View Drive<br>South Beach, Miami, FL 33139</p>
+        <p class="hours">Tue – Sun · 5:30 PM – 10:30 PM</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><a href="tel:+13055550128">(305) 555-0128</a></p>
+        <p><a href="mailto:hello@aurelia.dining">hello@aurelia.dining</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Follow</h4>
+        <div class="socials">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Aurelia. All rights reserved. · Demo website</p>
+    </div>
+  </footer>
+
+  <!-- ===== CART DRAWER ===== -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Your Order</h3>
+      <button class="close-cart" id="closeCart">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="empty-cart">Your cart is empty</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">$0</span>
+      </div>
+      <button class="btn-primary full" id="checkoutBtn">Place Order (Demo)</button>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <!-- ===== MOBILE BOTTOM NAV ===== -->
+  <nav class="mobile-bottom-nav">
+    <a href="#hero" class="mobile-nav-item active">
+      <span>⌂</span>
+      <span>Home</span>
+    </a>
+    <a href="#menu" class="mobile-nav-item">
+      <span>☰</span>
+      <span>Menu</span>
+    </a>
+    <button class="mobile-nav-item" id="mobileOrder">
+      <span>🛒</span>
+      <span>Order</span>
+    </button>
+    <button class="mobile-nav-item" id="mobileReserve">
+      <span>◷</span>
+      <span>Reserve</span>
+    </button>
+    <a href="tel:+13055550128" class="mobile-nav-item">
+      <span>☎</span>
+      <span>Call</span>
+    </a>
+  </nav>
+
+  <!-- Flying items container -->
+  <div id="flyers"></div>
+
+  <script src="js/app.js"></script>
+</body>
 </html>
