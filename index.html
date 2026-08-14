@@ -3,262 +3,346 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aurelia — Fine Dining</title>
-  <meta name="description" content="Aurelia is a modern fine dining restaurant offering an unforgettable culinary experience. Reserve a table or order online." />
+  <title>Flavoro Restaurant — Delicious Food Made with Love</title>
+  <meta name="description" content="Flavoro Restaurant — Experience the perfect blend of taste, quality and happiness in every bite. Book a table or order online." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <!-- ===== NAVBAR ===== -->
-  <header class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="/" class="logo">
-        <span class="logo-mark">A</span>
-        <span class="logo-text">AURELIA</span>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">🍴</span>
+        <div>
+          <span class="logo-name">Flavoro</span>
+          <span class="logo-sub">RESTAURANT</span>
+        </div>
       </a>
 
-      <nav class="nav-links">
-        <a href="#story">Our Story</a>
-        <a href="#menu">Menu</a>
-        <a href="#experience">Experience</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
+      <nav class="nav">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#reservations" class="nav-link">Reservations</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
-      <div class="nav-actions">
-        <button class="btn-ghost" id="orderBtn">Order Online</button>
-        <button class="btn-primary" id="reserveBtn">Reserve Table</button>
-        <button class="cart-btn" id="cartBtn" aria-label="Open cart">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
-            <line x1="3" y1="6" x2="21" y2="6"/>
-            <path d="M16 10a4 4 0 0 1-8 0"/>
-          </svg>
-          <span class="cart-badge" id="cartBadge">0</span>
-        </button>
-      </div>
+      <a href="#reservations" class="btn btn-primary btn-book">
+        <span>📅</span> Book a Table
+      </a>
 
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+      <button class="cart-btn" id="cartBtn" aria-label="Cart">
+        🛒
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="hero">
-    <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80" alt="Fine dining table setting" class="hero-image" />
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="hero-content">
-      <p class="hero-eyebrow">Contemporary Fine Dining</p>
-      <h1 class="hero-title">Where Taste<br>Meets Elegance</h1>
-      <p class="hero-subtitle">An intimate culinary journey crafted with seasonal ingredients, refined technique, and genuine hospitality.</p>
-      <div class="hero-ctas">
-        <a href="#menu" class="btn-primary">View Menu</a>
-        <button class="btn-outline" id="heroReserve">Reserve a Table</button>
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <p class="hero-tag">Good Food, Good Mood ✨</p>
+        <h1 class="hero-title">
+          Delicious Food<br>
+          <span class="highlight">Made with Love</span> ❤️
+        </h1>
+        <p class="hero-desc">
+          Experience the perfect blend of taste, quality and happiness in every bite.
+        </p>
+        <div class="hero-btns">
+          <a href="#menu" class="btn btn-primary">Explore Menu</a>
+          <a href="#reservations" class="btn btn-outline">📅 Book a Table</a>
+        </div>
+
+        <div class="hero-features">
+          <div class="feature">
+            <span class="feature-icon">🌿</span>
+            <div>
+              <strong>Fresh Ingredients</strong>
+              <span>100% Fresh & Healthy</span>
+            </div>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">👨‍🍳</span>
+            <div>
+              <strong>Expert Chefs</strong>
+              <span>10+ Years Experience</span>
+            </div>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">⭐</span>
+            <div>
+              <strong>Great Ambience</strong>
+              <span>Feel Like Home</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap">
+        <div class="hero-badge">
+          <span>Best</span>
+          <strong>Food</strong>
+          <span>In Town</span>
+        </div>
+        <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=700&q=80" alt="Grilled chicken pasta" class="hero-img" />
       </div>
     </div>
-    <div class="scroll-indicator">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="section about" id="about">
+    <div class="container about-grid">
+      <div class="about-left">
+        <p class="section-tag">About Us</p>
+        <h2 class="section-title">We Serve <span class="highlight">Happiness</span> ❤️</h2>
+        <p class="about-text">
+          At Flavoro, we believe that great food brings people together. Our chefs craft every dish with fresh ingredients and a passion for perfection.
+        </p>
+        <a href="#about" class="btn btn-primary">Learn More About Us →</a>
+      </div>
+
+      <div class="about-right">
+        <div class="about-img-wrap">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80" alt="Restaurant interior" />
+          <div class="experience-badge">
+            <span class="exp-number">10+</span>
+            <span class="exp-text">Years of<br>Experience</span>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-icon">🌿</span>
+            <strong>Fresh Ingredients</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">👨‍🍳</span>
+            <strong>Skilled Chefs</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">⚡</span>
+            <strong>Fast & Friendly Service</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">😊</span>
+            <strong>Happy Customers</strong>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ===== QUICK ACTIONS ===== -->
-  <section class="quick-actions">
-    <div class="quick-inner">
-      <a href="#menu" class="quick-item">
-        <span class="quick-icon">☰</span>
-        <span>View Menu</span>
-      </a>
-      <button class="quick-item" id="quickReserve">
-        <span class="quick-icon">◷</span>
-        <span>Reserve Table</span>
-      </button>
-      <button class="quick-item" id="quickOrder">
-        <span class="quick-icon">🛒</span>
-        <span>Order Online</span>
-      </button>
-      <a href="#contact" class="quick-item">
-        <span class="quick-icon">📍</span>
-        <span>Get Directions</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- ===== SIGNATURE DISHES ===== -->
-  <section class="section signature" id="menu">
+  <!-- ========== POPULAR DISHES ========== -->
+  <section class="section menu-section" id="menu">
     <div class="container">
-      <div class="section-header">
-        <p class="eyebrow">A Few Reasons to Come Hungry</p>
-        <h2 class="section-title">Signature Dishes</h2>
+      <div class="section-header center">
+        <p class="section-tag">Our Menu</p>
+        <h2 class="section-title">Popular Dishes</h2>
       </div>
 
       <div class="dishes-grid" id="dishesGrid">
-        <!-- Dishes will be injected by JS -->
+        <!-- Injected by JS -->
       </div>
     </div>
   </section>
 
-  <!-- ===== STORY ===== -->
-  <section class="section story" id="story">
-    <div class="container story-grid">
-      <div class="story-image">
-        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80" alt="Chef plating" />
+  <!-- ========== RESERVATION BANNER ========== -->
+  <section class="reservation-banner" id="reservations">
+    <div class="container banner-inner">
+      <div class="banner-text">
+        <p class="banner-tag">📅 Book Your Table</p>
+        <h2>Reserve Your Table Now!</h2>
+        <p>Good food is better when shared.</p>
       </div>
-      <div class="story-content">
-        <p class="eyebrow">More Than a Meal</p>
-        <h2 class="section-title">Our Story</h2>
-        <p class="story-text">
-          Aurelia was born from a simple belief: dining should feel like a celebration of the senses. 
-          Every dish is composed with precision, every ingredient chosen for its integrity, and every guest is welcomed as if they were family.
-        </p>
-        <p class="story-text">
-          Our kitchen works with local farms and coastal suppliers to bring the brightest flavors of the season to your table.
-        </p>
-        <a href="#experience" class="btn-text">Discover the Experience →</a>
-      </div>
+      <button class="btn btn-primary btn-lg" id="openReservation">📅 Book a Table</button>
     </div>
   </section>
 
-  <!-- ===== PHILOSOPHY ===== -->
-  <section class="section philosophy">
+  <!-- ========== GALLERY PREVIEW ========== -->
+  <section class="section gallery" id="gallery">
     <div class="container">
-      <p class="eyebrow center">Made With Intention</p>
-      <h2 class="section-title center">Our Philosophy</h2>
-      <div class="philosophy-grid">
-        <div class="phil-card">
-          <div class="phil-number">01</div>
-          <h3>Fresh Ingredients</h3>
-          <p>Thoughtfully selected produce, seafood, and proteins at their peak.</p>
-        </div>
-        <div class="phil-card">
-          <div class="phil-number">02</div>
-          <h3>Crafted Daily</h3>
-          <p>Everything prepared with attention to quality and consistency.</p>
-        </div>
-        <div class="phil-card">
-          <div class="phil-number">03</div>
-          <h3>Warm Hospitality</h3>
-          <p>Every guest should feel genuinely welcome and cared for.</p>
-        </div>
-        <div class="phil-card">
-          <div class="phil-number">04</div>
-          <h3>Memorable Flavors</h3>
-          <p>A menu designed around dishes people want to return for.</p>
-        </div>
+      <div class="section-header center">
+        <p class="section-tag">Gallery</p>
+        <h2 class="section-title">Moments at Flavoro</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&q=80" alt="Dining" /></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=500&q=80" alt="Chef" /></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500&q=80" alt="Interior" /></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=500&q=80" alt="Table" /></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== ATMOSPHERE ===== -->
-  <section class="section atmosphere" id="experience">
-    <div class="container">
-      <p class="eyebrow center">Come for the Food. Stay for the Atmosphere.</p>
-      <h2 class="section-title center">The Experience</h2>
-      <div class="atmosphere-grid">
-        <div class="atm-item large">
-          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=80" alt="Restaurant interior" />
-        </div>
-        <div class="atm-item">
-          <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=600&q=80" alt="Table setting" />
-        </div>
-        <div class="atm-item">
-          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="Plated dish" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== RESERVE CTA ===== -->
-  <section class="cta-banner">
-    <div class="container">
-      <h2>Reserve Your Table</h2>
-      <p>Join us for an evening of refined flavors and warm hospitality.</p>
-      <button class="btn-primary large" id="ctaReserve">Book a Table</button>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
+  <!-- ========== FOOTER ========== -->
   <footer class="footer" id="contact">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <div class="logo">
-          <span class="logo-mark">A</span>
-          <span class="logo-text">AURELIA</span>
-        </div>
-        <p>Contemporary fine dining in an intimate setting.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Visit</h4>
-        <p>128 Harbor View Drive<br>South Beach, Miami, FL 33139</p>
-        <p class="hours">Tue – Sun · 5:30 PM – 10:30 PM</p>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <p><a href="tel:+13055550128">(305) 555-0128</a></p>
-        <p><a href="mailto:hello@aurelia.dining">hello@aurelia.dining</a></p>
-      </div>
-      <div class="footer-col">
-        <h4>Follow</h4>
+        <a href="#" class="logo">
+          <span class="logo-icon">🍴</span>
+          <div>
+            <span class="logo-name">Flavoro</span>
+            <span class="logo-sub">RESTAURANT</span>
+          </div>
+        </a>
+        <p>Flavoro is where taste meets passion. We serve delicious food, great vibes, and unforgettable moments.</p>
         <div class="socials">
-          <a href="#">Instagram</a>
-          <a href="#">Facebook</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="Twitter">x</a>
+          <a href="#" aria-label="YouTube">▶</a>
         </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reservations">Reservations</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Opening Hours</h4>
+        <p>Monday – Friday<br>11:00 AM – 10:00 PM</p>
+        <p>Saturday – Sunday<br>10:00 AM – 11:00 PM</p>
+        <p class="open-now">We are Open Everyday!</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <p>📞 +1 234 567 8900</p>
+        <p>✉️ info@flavoro.com</p>
+        <p>📍 123 Food Street,<br>New York, USA 10001</p>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <p>© 2026 Aurelia. All rights reserved. · Demo website</p>
+      <p>© 2026 Flavoro Restaurant. All Rights Reserved. ❤️</p>
+      <div>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </div>
     </div>
   </footer>
 
-  <!-- ===== CART DRAWER ===== -->
+  <!-- ========== CART DRAWER ========== -->
   <div class="cart-drawer" id="cartDrawer">
     <div class="cart-header">
       <h3>Your Order</h3>
-      <button class="close-cart" id="closeCart">✕</button>
+      <button id="closeCart">✕</button>
     </div>
-    <div class="cart-items" id="cartItems">
-      <p class="empty-cart">Your cart is empty</p>
+    <div class="cart-body" id="cartBody">
+      <p class="empty">Your cart is empty</p>
     </div>
     <div class="cart-footer">
       <div class="cart-total">
         <span>Total</span>
-        <span id="cartTotal">$0</span>
+        <strong id="cartTotal">$0.00</strong>
       </div>
-      <button class="btn-primary full" id="checkoutBtn">Place Order (Demo)</button>
+      <button class="btn btn-primary full" id="checkoutBtn">Place Order (Demo)</button>
     </div>
   </div>
-  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="overlay" id="overlay"></div>
 
-  <!-- ===== MOBILE BOTTOM NAV ===== -->
-  <nav class="mobile-bottom-nav">
-    <a href="#hero" class="mobile-nav-item active">
-      <span>⌂</span>
-      <span>Home</span>
-    </a>
-    <a href="#menu" class="mobile-nav-item">
-      <span>☰</span>
-      <span>Menu</span>
-    </a>
-    <button class="mobile-nav-item" id="mobileOrder">
-      <span>🛒</span>
-      <span>Order</span>
-    </button>
-    <button class="mobile-nav-item" id="mobileReserve">
-      <span>◷</span>
-      <span>Reserve</span>
-    </button>
-    <a href="tel:+13055550128" class="mobile-nav-item">
-      <span>☎</span>
-      <span>Call</span>
-    </a>
-  </nav>
+  <!-- ========== RESERVATION MODAL ========== -->
+  <div class="modal" id="reservationModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModal">✕</button>
+      <h2>Reserve Your Table</h2>
+      <p class="modal-sub">We can’t wait to welcome you</p>
 
-  <!-- Flying items container -->
+      <form id="reservationForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Guests</label>
+            <select id="guests" required>
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="5">5 Guests</option>
+              <option value="6">6+ Guests</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Date</label>
+            <input type="date" id="date" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Preferred Time</label>
+          <div class="time-slots" id="timeSlots">
+            <button type="button" class="time-slot" data-time="17:30">5:30 PM</button>
+            <button type="button" class="time-slot" data-time="18:00">6:00 PM</button>
+            <button type="button" class="time-slot" data-time="18:30">6:30 PM</button>
+            <button type="button" class="time-slot" data-time="19:00">7:00 PM</button>
+            <button type="button" class="time-slot" data-time="19:30">7:30 PM</button>
+            <button type="button" class="time-slot" data-time="20:00">8:00 PM</button>
+            <button type="button" class="time-slot" data-time="20:30">8:30 PM</button>
+            <button type="button" class="time-slot" data-time="21:00">9:00 PM</button>
+          </div>
+          <input type="hidden" id="selectedTime" required />
+        </div>
+
+        <div class="form-group">
+          <label>Seating Preference</label>
+          <div class="seating-options">
+            <label class="seat-option"><input type="radio" name="seating" value="Indoor" checked /> Indoor</label>
+            <label class="seat-option"><input type="radio" name="seating" value="Outdoor" /> Outdoor</label>
+            <label class="seat-option"><input type="radio" name="seating" value="Window" /> Window</label>
+            <label class="seat-option"><input type="radio" name="seating" value="Bar" /> Bar</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" id="phone" placeholder="+1 234 567 8900" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="email" placeholder="you@example.com" />
+        </div>
+
+        <div class="form-group">
+          <label>Special Requests (optional)</label>
+          <textarea id="requests" rows="2" placeholder="Birthday, allergies, etc."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary full">Confirm Reservation</button>
+      </form>
+
+      <div class="confirmation" id="confirmation" hidden>
+        <div class="confirm-icon">✓</div>
+        <h3>Your table is waiting!</h3>
+        <p id="confirmDetails"></p>
+        <button class="btn btn-primary" id="closeConfirm">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flying items -->
   <div id="flyers"></div>
 
   <script src="js/app.js"></script>
